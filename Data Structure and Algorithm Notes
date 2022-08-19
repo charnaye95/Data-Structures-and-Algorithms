@@ -1,0 +1,7 @@
+Colt Steele's Udemy Course: JavaScript Algorithms and Data Structures Masterclass
+
+BIG O NOTATION
+
+What's the idea here?
+    - Imagine we have multiple implementations (ways to do) of the same function
+    - How can we determine which one is the "best"?
