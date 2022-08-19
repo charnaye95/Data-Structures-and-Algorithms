@@ -16,8 +16,18 @@ What does "best" or "better" mean? It's referring to which implementation/method
     - faster
     - less memory-intensive
 
-to test performance why not use timers? there's a problem with this
+To test performance why not use timers? there's a problem with this
     - different machines will record different times
     - the same machine will record different times
-    for fast algorithms, speed measurements may not be precise enough?
+    - for fast algorithms, speed measurements may not be precise enough?
 
+If not time, then what?
+    - rather than counting seconds, which are so variable... let's count the number of simple operations the computer has to perform!
+
+Counting operations is hard!
+    - depending on what we count, the number of operations can be as low as 2n or as high as 5n + 2. but regardless of the exact number, the number of operations grows roughly proportionally with n
+
+Introducing...Big O
+    - Big O Notation is a way to formalize fuzzy counting
+    - It allows us to talk formally about how the runtime of an algorithm grows as the inputs grow
+    - We won't caer about the details, only the trends

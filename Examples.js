@@ -26,3 +26,9 @@ console.log(`Time elapsed: ${(t2 -t1) / 1000} seconds`)
 // When comparing the two, function addUp is more efficient because it runs/performs faster
 
 // there's a problem with using timers though, refer to notes
+
+//Counting Operations
+
+// there's three operations in the function addUp. 1 multiplication, 1 addition, and 1 division. so 3 simple operations, regardless of the size of n
+
+//in the function addUpTo, theres a for loop. and so the amount of operations depends on n in this case. its doing n assignments, n comparisons, and n additions all over the place.
