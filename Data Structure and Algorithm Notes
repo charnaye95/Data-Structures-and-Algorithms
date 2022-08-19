@@ -5,3 +5,19 @@ BIG O NOTATION
 What's the idea here?
     - Imagine we have multiple implementations (ways to do) of the same function
     - How can we determine which one is the "best"?
+
+Who cares?
+    - It's important to have a precise vocabulary to talk about how our code performs
+    - Useful for discussing trade-offs between different approaches
+    - When your code slows down or crashes, identifying parts of the code that are inefficient can help us find pain points in our applications
+    - It comes up in interviews!
+
+What does "best" or "better" mean? It's referring to which implementation/method to solve the problem is:
+    - faster
+    - less memory-intensive
+
+to test performance why not use timers? there's a problem with this
+    - different machines will record different times
+    - the same machine will record different times
+    for fast algorithms, speed measurements may not be precise enough?
+
