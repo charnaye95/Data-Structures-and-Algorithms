@@ -30,4 +30,13 @@ Counting operations is hard!
 Introducing...Big O
     - Big O Notation is a way to formalize fuzzy counting
     - It allows us to talk formally about how the runtime of an algorithm grows as the inputs grow
-    - We won't caer about the details, only the trends
+    - We won't care about the details, only the trends
+
+Big O Definition
+    - We say that an algorithm is big O of f of n - O(f(n)) - if the number of simple operations the computer has to do is eventually less than a constant times f of n - f(n) - as n increases
+        -f(n) could be linear where (f(n) = n) meaning as n (input) grows run time is increasing just as much
+        - f(n) could be quadratic where (f(n) = n²) meaning as n (input) grows runtime is increasing to the square of n
+        - f(n) could be constant where (f(n) = 1) meaning as n (input) grows it doesn't really have an affect on runtime
+        - f(n) could be something entirely different! 
+
+REMEMBER: big O notation is just a generalized way for talking about how efficient an algorithm is as n (an input) grows, how does that affect change or reflect in runtime?
