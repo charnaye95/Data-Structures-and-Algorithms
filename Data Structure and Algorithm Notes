@@ -98,3 +98,52 @@ Who cares?
     - The time or space complexity (as measured by Big O) depends only on the algorithm, not the hardware used to run the algorithm 
     - Big O is everywhere, so get lots of practice!**
 
+ANALYZING PERFORMANCE OF ARRAYS AND OBJECTS
+
+Objects include unordered, key value pairs!
+
+When to use objects
+    - when you don't need order
+    - when you need fast access / insertion and removal
+
+Big O of Objects
+    - Insertion - O(1)
+    - Removal - O(1)
+    - Searching - O(n)
+    - Access - O(1)
+
+Big O of Object Methods
+    - Object.keys - O(n)
+    - Object.values - O(n)
+    - Object.entries - O(n)
+    - hasOwnProperty - O(1)
+
+Arrays are ordered lists!
+
+When to use objects
+    - when you need order
+    - when you need fast access / insertion and removal (sort of...)
+
+Big O of Arrays
+    - Insertion - it depends...
+        -inserting at the end of an array would have a O(1) one operation essentially, constant
+        - inserting at the beginning of an array would have a O(n) because in addition to inserting whatever into the beginning of the array, it also has to re-index each element in the array
+    - Removal - it depends...
+        - same premise goes for removal
+        -removing at the end of an array would have a O(1) one operation essentially, constant
+        - removing at the beginning of an array would have a O(n) because in addition to removing whatever into the beginning of the array, it also has to re-index each element in the array
+    - Searching - O(n)
+    - Access - O(1)
+
+Big O of Array Operations
+    - push - O(1)
+    - pop - O(1)
+    - shift - O(n)
+    - unshift - O(n)
+    - concat - O(n)
+    - slice - O(n)
+    - splice - O(n)
+    - sort - O(n * log n)
+    - forEach/map/filter/reduce/etc. - O(n)
+
+

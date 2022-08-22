@@ -1,5 +1,7 @@
 // Examples
 
+//BIG O NOTATION
+
 // Suppose we want to write a function that calculates the sum of all numbers from 1 up to (and including) some number n.
 
 const addUpTo = (n) => {
@@ -64,3 +66,14 @@ const double = (arr) => {
     return newArr
 }
 // whats important to note here in this function is that a new array is being created and that takes up space from the assignment of newArr. but where we are pushing numbers into the new array by the end of the function, that is where based on the length of our arr to start, that changes how much pushing we are doing into our newArr. so the space that's taken up is directly proportionate to n (length) of arr. here for this function, we have O(n) space.
+
+//BIG O OF OBJECTS
+let instructor = {
+    firstName: "Kelly",
+    isInstructor: true,
+    favoriteNumbers: [1,2,3,4]
+}
+// Inserting, removing,and accessing a key or value in an object (like this one) all have a constant time complexity, a big O of 1 - O(1)
+
+let names = ["Sam", "Charneyce", "Frank"]
+// accessing an element in an array (like this one) has a constant time complexity, a big O of 1 - O(1)
