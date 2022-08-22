@@ -39,7 +39,7 @@ Big O Definition
         - f(n) could be constant where (f(n) = 1) meaning as n (input) grows it doesn't really have an affect on runtime
         - f(n) could be something entirely different! 
 
-REMEMBER: big O notation is just a generalized way for talking about how efficient an algorithm is as n (an input) grows, how does that affect change or reflect in runtime? All we care about is the general trend. Not counting out each of the operations going on.
+**Remember: big O notation is just a generalized way for talking about how efficient an algorithm is as n (an input) grows, how does that affect change or reflect in runtime? All we care about is the general trend. Not counting out each of the operations going on.**
 
 Simplifying Big O Expressions
     - when determining the time complexity of an algorithm, there are some helpful rules of thumb for big O expressions.
@@ -68,3 +68,33 @@ Space Complexity in JS
         - most primitives (booleans, numbers, undefined, null) are constant space
         - strings require O(n) space (where n is the string length)
         - reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
+Logarithms
+    - We've encountered some of the most common complexities: O(1), O(n), O(n²)
+    - Sometimes big O expressions involve more complex mathematical expressions
+    - one that appears more often than you might like is the logarithm!
+
+Wait, what's a logarithm?
+    a logarithm is the inverse of exponentiation.
+    - so we may see log₂(8) = 3 and its saying 2 to the what power equals 8. aka log₂(value) = exponent
+    - when writing big 0 notation for logarithms we're going to omit the 2, because like for time and space complexity, we care about the general trend
+
+Huh?
+    - this isn't a math course so here's a rule of thumb.
+    - the logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that is less than or equal to 1.
+    Example: 8/2 = 4, 4/2 = 2, 2/2 = 1; we divided three times. so the log(8) = 3
+
+In general, logarithm time complexity is great! the runtime is short. you can see better visually on the trends graph
+
+Who cares?
+    - certain searching algorithms have logarithmic time complexity
+    - efficient sorting algorithms involve logarithms
+    - recursion sometimes involve logarithmic space complexity
+
+**Recap
+    - to analyze the performance of an algorithm, we use Big O Notation
+    - Big O Notation can give us a high level understanding of the time or space complexity of an algorithm
+    - Big O Notation doesn't care about precision, only about general trends (linear? quadratic? constant?)
+    - The time or space complexity (as measured by Big O) depends only on the algorithm, not the hardware used to run the algorithm 
+    - Big O is everywhere, so get lots of practice!**
+
