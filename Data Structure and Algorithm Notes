@@ -39,4 +39,17 @@ Big O Definition
         - f(n) could be constant where (f(n) = 1) meaning as n (input) grows it doesn't really have an affect on runtime
         - f(n) could be something entirely different! 
 
-REMEMBER: big O notation is just a generalized way for talking about how efficient an algorithm is as n (an input) grows, how does that affect change or reflect in runtime?
+REMEMBER: big O notation is just a generalized way for talking about how efficient an algorithm is as n (an input) grows, how does that affect change or reflect in runtime? All we care about is the general trend. Not counting out each of the operations going on.
+
+Simplifying Big O Expressions
+    - when determining the time complexity of an algorithm, there are some helpful rules of thumb for big O expressions.
+        - constants don't matter.
+        if a function were to have O(2n) you could simplify that to O(n). likewise, if a function had a O(500) you could simplify that to O(1) its how we say something is constant. if a function had a 0(13n²) you could simplify to O(n²)
+
+Big O Shorthands
+    - analyzing complexity with big O can get complicated
+    there are several rules that can help
+    - these rules don't ALWAYS work, but they are a helpful starting point
+        1. Arithmetic operations are constant. so if we're adding something or subtracting or dividing and so on thats going to be constant runtime.
+        2. Variable assignment is constant x equaling any number is about the same amount of runtime
+        3. Accessing elements in an array (by index) or (by key) is constant
