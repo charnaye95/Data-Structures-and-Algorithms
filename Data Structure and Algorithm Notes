@@ -53,3 +53,18 @@ Big O Shorthands
         1. Arithmetic operations are constant. so if we're adding something or subtracting or dividing and so on thats going to be constant runtime.
         2. Variable assignment is constant x equaling any number is about the same amount of runtime
         3. Accessing elements in an array (by index) or (by key) is constant
+        4. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
+
+Space Complexity
+    - So far, we've been focusing on time complexity: how can we analyze the runtime of an algorithm as the size of the inputs increases?
+    - But we can also use big O notation to analyze SPACE COMPLEXITY, how much additional memory do we need to allocate in order to run the code in our algorithm?
+
+What about the inputs?
+    - Sometimes you'll hear the term auxiliary space complexity to refer to space required by the algorithm, not including space taken up by inputs.
+    - Unless otherwise noted, when we talk about space complexity, technically we'll be talking about auxiliary space complexity.
+
+Space Complexity in JS 
+    - Rules of Thumb
+        - most primitives (booleans, numbers, undefined, null) are constant space
+        - strings require O(n) space (where n is the string length)
+        - reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)

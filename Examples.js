@@ -45,3 +45,22 @@ function printAllPairs(n) {
     }
 }
 // this function includes a nested loop, where one for loop is inside of the other. the big O notation here is: O of n squared, O(n²)
+
+// SPACE COMPLEXITY
+const sum = (arr) => {
+    let total = 0
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i]
+    }
+    return total
+}
+// space is what we are concerned about here. no matter what the array length is we an assigned variable in total and in i. and we're having numbers within the array added up together, but despite what numbers are in the array, it doesn't have an impact on space that's taken up because we only have these two variables and they exist no matter what. here for this function, we have constant space, it is O(1) space. its always the same no matter the input.
+
+const double = (arr) => {
+    let newAr = []
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(2 * arr[i])
+    }
+    return newArr
+}
+// whats important to note here in this function is that a new array is being created and that takes up space from the assignment of newArr. but where we are pushing numbers into the new array by the end of the function, that is where based on the length of our arr to start, that changes how much pushing we are doing into our newArr. so the space that's taken up is directly proportionate to n (length) of arr. here for this function, we have O(n) space.
