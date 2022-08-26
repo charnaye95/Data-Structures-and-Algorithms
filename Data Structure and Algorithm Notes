@@ -183,5 +183,30 @@ Step 3: Break it Down
     -This forces you to think about the code you'll write before you write it, and helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about details (e.g. language syntax) as well.
 
 Step 4: Solve or Simplify
+    - Solve the problem if you can. If you can't, solve a simpler problem!
+    - Simplify
+        - Find the core difficulty in what you're trying to do
+        - Temporarily ignore that difficulty
+        - Write a simplified solution
+        - Then incorporate that difficulty back in 
 
 Step 5: Look Back and Refactor
+    - Congrats on solving it, but you're not done!
+    - Can you check the result? Making sure the code works.
+    - Can you derive the result differently? Is there other ways or approaches to solve it.
+    - Can you understand it at a glance? How intuitive is your code? Could it make sense on a paper/whiteboard?
+    - Can you use the result or method for some other problem? It helps you find similarities in other problems.
+    - Can you improve the performance of your solution? Think time and space complexity.
+    - Can you think of other ways to refactor?
+    - How have other people solved this problem?
+
+Recap and Interview Strategies
+    1. Understand the Problem: ask questions of interviewer, clarify the problem. Think about how solution should operate and behave in each scenario.
+
+    2. Explore Concrete Examples
+
+    3. Break It Down: write your process/gameplay out so you can show interviewer in what direction you were going
+
+    4. Solve/Simplify: solve what you can if you can
+    
+    5. Look Back and Refactor: make sure its working, and think about if there are other ways the problem could have been solved 

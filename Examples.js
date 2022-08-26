@@ -83,17 +83,17 @@ let names = ["Sam", "Charneyce", "Frank"]
 //Step 1: Understand the Problem
 
 // Example: Write a function which takes two numbers and returns their sum.
-    // Now working through this prompt, think about the questions we should ask ourselves:
-        // 1. Can I restate the problem in my own words? 
-            // add two numbers together in a function
-        // 2. What are the inputs that go into the problem? 
-            // we need two numbers
-        // 3. What are the outputs that should come from the solution to the problem? 
-            // we want one output or sum
-        // 4. Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem? (You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.)
-            // Yes
-        // 5. How should I label the important pieces of data that are a part of the problem?
-            // I would need a label for function name, and variables for numbers if I choose to
+// Now working through this prompt, think about the questions we should ask ourselves:
+// 1. Can I restate the problem in my own words? 
+// add two numbers together in a function
+// 2. What are the inputs that go into the problem? 
+// we need two numbers
+// 3. What are the outputs that should come from the solution to the problem? 
+// we want one output or sum
+// 4. Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem? (You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.)
+// Yes
+// 5. How should I label the important pieces of data that are a part of the problem?
+// I would need a label for function name, and variables for numbers if I choose to
 
 
 const addTogether = (a, b) => {
@@ -106,39 +106,53 @@ addTogether()
 // Step 2: Explore Concrete Examples
 
 // Example: Write a function which takes in a string and returns count of each character in the string.
-    // Start with Simple Examples
-        // charCount("aaaa") => {a:4}
-        // charCount("hello") => {h:1, e:1, l:2, o:1}
-    // Progress to More Complex Examples
-        // "my phone number is 182763" => thinking about, what about spaces should those be counted, and what about numbers in the string
-        // "Hello hi" => thinking about, what about uppercase letters should those be counted differently or as just a lowercase h
-    // Explore Examples with Empty Inputs
-        // what if someone input charCount() or an empty string like this charCount(""), what would we want that to return or be printed to our console?
-    // Explore Examples with Invalid Inputs
-        // what if someone input something that's not a string, like an array, object, number, etc.
-
-const counting = () => {
-    let last = "Grier"
-    console.log(last.length)
-}
-counting()
+// Start with Simple Examples
+// charCount("aaaa") => {a:4}
+// charCount("hello") => {h:1, e:1, l:2, o:1}
+// Progress to More Complex Examples
+// "my phone number is 182763" => thinking about, what about spaces should those be counted, and what about numbers in the string
+// "Hello hi" => thinking about, what about uppercase letters should those be counted differently or as just a lowercase h
+// Explore Examples with Empty Inputs
+// what if someone input charCount() or an empty string like this charCount(""), what would we want that to return or be printed to our console?
+// Explore Examples with Invalid Inputs
+// what if someone input something that's not a string, like an array, object, number, etc.
 
 // Step 3: Break it Down
 
 // Example: Write a function which takes in a string and returns count of each character in the string.
 // function charCount(str) {
-//     //do something
-//     //return an object with keys that are lowercase alphanumeric character in the string; values should be the counts for those characters
+// do something
+// return an object with keys that are lowercase alphanumeric character in the string; values should be the counts for those characters
 // }
-// function chaCount(str) {
-//     // make object to return at end
-//     // loop over 
+// function charCount(str) {
+// make object to return at end
+// loop over string, for each character...
+// if the character is number/letter AND a key in object, add one to count
+// if the character is number/letter AND not in object, add it to object and set value to 1
+// if character is something else (space, period, etc.) don't do anything
+// return object at end
 // }
-function charCount(str, i) {
+
+// Step 4: Solve or Simplify
+// Example: Write a function which takes in a string and returns count of each character in the string.
+
+function charCount(str) {
     str = "My last four digits of my number is 0005"
-    for(let char in str) {
-        console.log(`${char}: ${str[i]}`)
+    // make object to return at end
+    let obj = {}
+    // loop over string, for each character...
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase()
+        // if the character is number/letter AND a key in object, add one to count
+        if (obj[char] > 0) {
+            obj[char]++
+            // if the character is number/letter AND not in object, add it to object and set value to 1
+        }
+        else {
+            obj[char] = 1
+        }
     }
-    // console.log()
+    // return object at end
+    console.log(obj)
 }
 charCount()
