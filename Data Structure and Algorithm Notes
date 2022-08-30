@@ -205,8 +205,30 @@ Recap and Interview Strategies
 
     2. Explore Concrete Examples
 
-    3. Break It Down: write your process/gameplay out so you can show interviewer in what direction you were going
+    3. Break It Down: write your process/gameplan out so you can show interviewer in what direction you were going
 
     4. Solve/Simplify: solve what you can if you can
     
-    5. Look Back and Refactor: make sure its working, and think about if there are other ways the problem could have been solved 
+    5. Look Back and Refactor: make sure its working, and think about if there are other ways the problem could have been solved
+
+PROBLEM SOLVING PATTERNS
+    
+How Do You Improve?
+    1. Devise a plan for solving problems
+    
+    2. Master common problem solving patterns
+         Some patterns:
+            - frequency counter
+            - multiple pointers
+            - sliding window
+            - divide and conquer
+            - dynamic programming
+            - greedy algorithms
+            - backtracking
+            - many more!
+
+Frequency Counter Pattern
+
+    - this pattern uses objects or sets to collect values/frequencies of values
+    - this can often avoid the need for nested loops or O(n²) operations with arrays/strings
+    - this is useful in algorithms and challenges when you have multiple pieces of data, and you need to compare them to see if they consist of similar values, if they are anagrams of one another, if a value is contained inside of another value--any time you're comparing pieces of data to input(s) and frequencies of them occurring
