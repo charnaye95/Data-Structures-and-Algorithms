@@ -167,8 +167,8 @@ charCount()
 
 const same = (array1, array2) => {
     if (array1.length !== array2.length) {
-        return false
         console.log(false)
+        return false
     }
     let frequencyCounter1 = {} // these objects count the frequency of individual values in the array
     let frequencyCounter2 = {} // these objects count the frequency of individual values in the array
@@ -180,12 +180,12 @@ const same = (array1, array2) => {
     }
     for (let key in frequencyCounter1) {
         if (!(key ** 2 in frequencyCounter2)) {
-            return false
             console.log(false)
+            return false
         }
         if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
-            return false
             console.log(false)
+            return false
         }
     }
     console.log(frequencyCounter1)
@@ -194,7 +194,7 @@ const same = (array1, array2) => {
     return true
 }
 
-same([2,5,7], [49,4,25])
+same([2, 5, 7], [49, 4, 25])
 
 // this function runs at linear time complexity, O(n)
 // So the idea behind the frequency counter is to use an object and then use that object to construct a profile. A way of breaking down the contents of an array or string. And then you're able to quickly compare that breakdown to how another object looks, that was constructed from a string or an array
@@ -204,16 +204,67 @@ same([2,5,7], [49,4,25])
 // Example: Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema formed from iceman.
 
 const validAnagram = (string1, string2) => {
-if (string1.length !== string2.length) {
-    return false
-}
-freqCount1 = {}
-freqCount2 = {}
-for(let letter in string1) {
-    string1[letter]
-}
-for(let letter in string2) {
-    string2[letter]
-}
-}
+    if (string1.length !== string2.length) {
+        console.log(false)
+        return false
+    }
+    let lookup = {}
 
+    for (let i = 0; i < string1.length; i++) {
+        let letter = string1[i]
+        lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1
+    }
+    console.log(lookup)
+    for (let i = 0; i < string2.length; i++) {
+        let letter = string2[i]
+        if (!lookup[letter]) {
+            console.log(false)
+            return false
+        } else {
+            lookup[letter] -= 1
+        }
+    }
+    console.log(true)
+    return true
+}
+validAnagram('cat', 'act')
+
+//Multiple Pointers Pattern
+
+// Example: Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist
+
+const sumZero = (array) => {
+    let left = 0
+    //first pointer starting at the beginning
+    let right = array.length - 1
+    //second pointer starting at the end
+    while (left < right) {
+        let sum = array[left] + array[right]
+        if (sum === 0) {
+            console.log([array[left], array[right]])
+            return [array[left], array[right]]
+        } else if (sum > 0) {
+            right--
+        } else {
+            left++
+        }
+    }
+}
+sumZero([-4, -3, -2, -1, 0, 1, 2, 6, 10])
+
+// Multiple Pointers Pattern: Count Unique Values Challenge
+
+// Example: Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
+
+const countUniqueValues = (array) => {
+    let i = 0
+    for (let j = 1; j < array.length; j++) {
+        if (array[i] !== array[j]) {
+            i++
+            array[i] = array[j]
+        }
+    }
+    console.log(i + 1)
+    return i + 1
+}
+countUniqueValues([1, 1, 2, 3, 3, 4, 5, 6, 6, 7])

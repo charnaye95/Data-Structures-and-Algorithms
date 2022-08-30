@@ -232,3 +232,11 @@ Frequency Counter Pattern
     - this pattern uses objects or sets to collect values/frequencies of values
     - this can often avoid the need for nested loops or O(n²) operations with arrays/strings
     - this is useful in algorithms and challenges when you have multiple pieces of data, and you need to compare them to see if they consist of similar values, if they are anagrams of one another, if a value is contained inside of another value--any time you're comparing pieces of data to input(s) and frequencies of them occurring
+
+Multiple Pointers Pattern
+    - creating pointers or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition
+    - very efficient for solving problems with minimal space complexity as well
+    - we have some sort of structure like a string or array and the idea is to search for something that meets a condition (usually a pair) and we use two references. we'll start one reference maybe at the beginning and one at the end and work towards each other(towards the middle), or one reference could start at the first letter and the second references start at the second letter and work towards the end in the same direction, and vice versa if started references at the end of the string or array  
+
+Sliding Window Pattern
+    -
