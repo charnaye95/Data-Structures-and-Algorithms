@@ -1,6 +1,6 @@
 // Examples
 
-//BIG O NOTATION
+// BIG O NOTATION
 
 // Suppose we want to write a function that calculates the sum of all numbers from 1 up to (and including) some number n.
 
@@ -29,7 +29,7 @@ console.log(`Time elapsed: ${(t2 - t1) / 1000} seconds`)
 
 // there's a problem with using timers though, refer to notes
 
-//Counting Operations
+// Counting Operations
 
 // there's three operations in the function addUp. 1 multiplication, 1 addition, and 1 division. so 3 simple operations, regardless of the size of n
 
@@ -67,7 +67,7 @@ const double = (arr) => {
 }
 // whats important to note here in this function is that a new array is being created and that takes up space from the assignment of newArr. but where we are pushing numbers into the new array by the end of the function, that is where based on the length of our arr to start, that changes how much pushing we are doing into our newArr. so the space that's taken up is directly proportionate to n (length) of arr. here for this function, we have O(n) space.
 
-//BIG O OF OBJECTS
+// BIG O OF OBJECTS
 let instructor = {
     firstName: "Kelly",
     isInstructor: true,
@@ -163,7 +163,7 @@ charCount()
 
 // Example: Write a function called same, which accepts two arrays. The function should return true if every value in the array has it's corresponding value squared in the second array. The frequency of values must be the same.
 
-//Instead of a nested loop solution where it has a O(n²), we can loop over each array one time individually. Two separate loops is vastly better than two nested loops
+// Instead of a nested loop solution where it has a O(n²), we can loop over each array one time individually. Two separate loops is vastly better than two nested loops
 
 const same = (array1, array2) => {
     if (array1.length !== array2.length) {
@@ -229,7 +229,7 @@ const validAnagram = (string1, string2) => {
 }
 validAnagram('cat', 'act')
 
-//Multiple Pointers Pattern
+// Multiple Pointers Pattern
 
 // Example: Write a function called sumZero which accepts a sorted array of integers. The function should find the first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if a pair does not exist
 
@@ -268,3 +268,30 @@ const countUniqueValues = (array) => {
     return i + 1
 }
 countUniqueValues([1, 1, 2, 3, 3, 4, 5, 6, 6, 7])
+
+// Sliding Window Pattern
+
+// Example: Write a function called maxSubarraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
+
+// So what we want to do is to make a window which can be a single variable, a subarray, or even a string. And we move that window depending on a condition. We slide it up usually from left to right. And sometimes you could make a new window. 
+
+// It's useful in these problems where we're keeping track of a subset of data in a larger set of data.
+
+const maxSubarraySum = (array, num) => {
+    let maxSum = 0
+    let tempSum = 0
+    if (array.length < num) return null
+    for (let i=0; i < num; i++) {
+        maxSum += array[i]
+    }
+    tempSum = maxSum
+    for (let i = num; i < array.length; i++) {
+        tempSum = tempSum - array[i - num] + array[i]
+        maxSum = Math.max(maxSum, tempSum)
+        console.log(tempSum, maxSum)
+    }
+    console.log(maxSum)
+    return maxSum
+}
+
+maxSubarraySum([5,2,8,9,3,1,3,5,6,10],4)

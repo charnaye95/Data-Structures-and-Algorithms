@@ -239,4 +239,6 @@ Multiple Pointers Pattern
     - we have some sort of structure like a string or array and the idea is to search for something that meets a condition (usually a pair) and we use two references. we'll start one reference maybe at the beginning and one at the end and work towards each other(towards the middle), or one reference could start at the first letter and the second references start at the second letter and work towards the end in the same direction, and vice versa if started references at the end of the string or array  
 
 Sliding Window Pattern
-    -
+    - This pattern involves creating a window which can either be an array or number from one position to another
+    - Depending on a certain condition, the window either increases or closes (and a new window is created)
+    - Very useful for keeping track of a subset of data in an array/string etc.
